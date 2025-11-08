@@ -28,3 +28,5 @@ trabajo = "futuro trabajo"
 sueldo = 200.000
 nombre = "Efrain garcia"
 print(f"Mi {trabajo}, es ser programador, mi sueldo va  a ser de :{sueldo}, recuerda mi nombre es: {nombre}")
+print(2**10)
+print(2e10)
