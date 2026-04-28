@@ -17,4 +17,6 @@ def es_multiplo(x, y):
 
 def sumatoria_divisores_propios(numeros):
     sumatoria = 0
-    for i in range(1, numero // 2)
+    for i in range(1, numero // 2 + 1):
+        
+    
