@@ -1,0 +1,40 @@
+"""PROGRAMA PARA ABRIR DIRECCIONES WEB EN DIFERENTES PESTAÑA DEL NAVEGADOR 
+Paso 1: Preparar la lista de sitios
+Antes de programar, necesitamos el insumo. Crea un archivo llamado sitios.txt en la misma carpeta donde guardarás tu código de Python. Dentro, escribe las URLs una por debajo de la otra:
+
+Paso 2: La herramienta mágica (webbrowser)
+Python es famoso porque "incluye las baterías". Para interactuar con el navegador, usaremos un módulo que ya viene instalado llamado webbrowser. No necesitas descargar nada, solo importarlo.
+
+Paso 3: El Código Comentado
+Aquí tienes el script. Léelo con atención, he puesto comentarios para explicar qué hace cada línea:
+
+Paso 4: Explicación para clase (Conceptos Clave)
+A. El "Context Manager" (with open)
+En programación, abrir un archivo es como pedir un libro prestado en una biblioteca. Si lo abres y no lo cierras, consumes memoria. Al usar with, le decimos a Python: "Abre esto y, cuando termine este bloque de código, devuélvelo y ciérralo automáticamente". Es una buena práctica profesional.
+
+B. La limpieza con .strip()
+Este es el error donde caen todos los principiantes. En el archivo de texto, después de google.com, hay un "Enter" invisible. Si no usas .strip(), Python intentará abrir https://www.google.com\n y el navegador te dará un error de "Dirección no encontrada".
+
+C. ¿Por qué Chrome?
+Por defecto, webbrowser.open_new_tab() abrirá el navegador que tengas configurado como predeterminado en Windows. Si quieres obligar a Python a usar Chrome específicamente (aunque no sea el predeterminado), el código se vuelve un poco más avanzado porque hay que darle la ruta del programa .exe, pero para empezar, lo ideal es usar el predeterminado del sistema."""
+
+import webbrowser
+
+# 1. Definimos el nombre del archivo que queremos leer 
+archivos_url = "links.txt"
+
+# 2. Abrimos el archivo en modo lectura ('r' de read)
+# Usamos 'with' porque es la forma segura: Python cierra el archivo solo al terminar
+with open(archivos_url, "r") as archivo:
+# 3. Recorremos el archivo línea por línea usando un bucle 'for'
+    for linea in archivo:
+# 4. Limpiamos la línea. 
+        # Los archivos de texto tienen saltos de línea invisibles (\n) 
+        # .strip() elimina esos espacios y saltos sobrantes.
+        url = linea.strip()
+# 5. Si la línea no está vacía, abrimos la URL en una pestaña nueva
+        if url:
+            print(f"Abriendo: {url}")
+            webbrowser.open_new_tab(url)
+
+# NOTA Ejecútalo desde tu terminal GitBash con: python nombre_de_tu_archivo.py
