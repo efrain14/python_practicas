@@ -10,9 +10,9 @@ my_str = "Hello world"
 print(my_str[0])  # H
 print(my_str[6])  # w
 
-"""La indexación negativa también está permitida, por lo que puedes obtener el 
-último carácter de cualquier cadena con -1, el penúltimo carácter con -2, y así 
-sucesivamente:"""
+#La indexación negativa también está permitida, por lo que puedes obtener el 
+#último carácter de cualquier cadena con -1, el penúltimo carácter con -2, y así 
+#sucesivamente:
 
 my_str = 'Hello world'
 print(my_str[-1])  # d

@@ -1,5 +1,6 @@
-"CADENAS DE CARACTERES"
-"""A veces, puede que necesites verificar si una cadena contiene uno o más caracteres.
+
+"""CADENA DE CARACTERES
+A veces, puede que necesites verificar si una cadena contiene uno o más caracteres.
 Para eso, Python proporciona el operador in, que devuelve un booleano que especifica
 si el carácter o los caracteres existen en la cadena o no.
 Aquí hay algunos ejemplos:"""

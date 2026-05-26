@@ -8,5 +8,5 @@ print(greeting) # hello
 
 #Pero no se permite la modificación directa de una cadena:
 
-greeting = 'hi'
-greeting[0] = 'H' # TypeError: 'str' object does not support item assignment
+#greeting = 'hi'
+#greeting[0] = 'H' # TypeError: 'str' object does not support item assignment
